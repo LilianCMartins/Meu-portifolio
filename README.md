@@ -1,5 +1,7 @@
 
- ### Meu Portifólio
+![Foto do Portifólio de Lilian Martins](assets/Foto-do-portifólio.png)
+
+### Meu Portifólio
 Este é um projeto de portfólio web desenvolvido com HTML e CSS, ele está em desenvolvimento.
 
 ### 🔨 Funcionalidades do projeto
