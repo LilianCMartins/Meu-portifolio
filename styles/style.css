@@ -1,91 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*é o código da fonte que quero utilizar*/
 
-:root{/* para criar variáveis de forma global dentro do css*/
-    --cor--primaria: #034C53;  /*Declaramos as variáveis*/
-    --cor--secundaria:#F6F6F6;
-    --cor--terciaria:#000000;
-    --cor--hover:#272727;
-
-    /*variáveis das fontes*/
-    --fonte-primaria: 'Krona One', sans-serif;
-    --font-secundaria: 'Montserrat', sans-serif;
-
-}
 
 *{   /* O asterisco seleciona toda a páginas*/
-    margin:0;
-    padding:0;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     /* height:100vh; */
-    box-sizing: border-box; /* limitar as bordas*/
-    background-color: var(--cor--primaria);
-    color: var(--cor--secundaria)
+   
+    background-color:#000000;
+    color: white;
+    font-family:'Montserrat', sans-serif;
+    line-height: 1.6;
 }
-
 .cabecalho {
     padding: 2% 0% 0% 15%;   /*primeiro valor superior, segundo valor preenchimento direito, terceiro valor preenchimento inferior, quarto valor é o preenchimento esquerdo*/
-
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(150, 152, 152, 0.9));
 }
 .cabecalho__menu{
     display:flex;
     gap:80px;
 }
 
-
 .cabecalho__menu__link{
-    font-family:var(--fonte-secundaria);
+ 
+    
     font-size: 1.5rem;
-    font-weight: 600;
-    color:var(--cor--secundaria);
-    text-decoration: none;/* tira a decoração do texto*/
+    color:#F6F6F6;
+    text-decoration: none; /* tira a decoração do texto*/
+    transition: all 0.3s ease;
+    position: relative;
 
+
+}
+
+
+.cabecalho__menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #F6F6F6;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.cabecalho__menu__link:hover::after {
+    transform: scaleX(1);
 }
 
 .apresentacao {
 
     padding:5% 15%;
     display: flex; /*ela indica quando começaremos a usar o flexbox para posicionar nossos elementos*/
-    align-items: center; /* alinha os itens, ao próprio elementos dele*/
-    justify-content: space-between;/*alinhar elementos, o justify-content ´é o comando responsável por justificar, formatando o posicionanamento de acordo com o requisito do desenvolvedor*/
-    gap: 82px;
-}
-.apresentacao__conteudo {
-    width: 50%;
-    display:flex;
     flex-direction:column;
-    gap:40px;           /*espaçamento entre os elementos filhos*/
+    align-items: center; /* alinha os itens, ao próprio elementos dele*/
+    gap: 82px;
 }
 
 .apresentacao__conteudo__titulo {
     font-size:3.25rem;  /*rem é o valor da fonte/por 16*/
-    font-family:var(--fonte-primaria)
+    
 }
 .titulo-destaque{ /*seleciona uma parte especifica.A classe é como um agrupamento de tipo*/
-    color:var(--cor--terciaria)
+    color: #000
 }
 
 .apresentacao__conteudo__texto {
-  font-size:2.5rem; /*fonte*/  
-  font-family:var(--fonte-secundaria) 
-}
-
-/*Posiocionamento de botões*/
-
-.apresentacao__links {
+    font-size:2.5rem; /*fonte*/  
+    font-family:'Montserrat', sans-serif
+  }
+  .apresentacao__links {
     display: flex;
     flex-direction: column; /*organiza os elementos verticalmente*/
     justify-content: space-between;  /* espaçamento entre os botões*/
     align-items:center; /* centraliza os elementos na vertical, ou na horizontal*/
     gap:32px;
-    
+   
 }
 .apresentacao__links__subtitulo{
-    font-family: var(--fonte-primaria);
+    font-family:'Krona One', sans-serif;
     font-weight:400px;
     font-size:1.75rem;
-    
+   
 }
 
 .apresentacao__links__navegacao {
@@ -93,7 +96,7 @@ body {
     display:flex;
     justify-content: center; /*alinhar os itens */
     gap:16px; /*espaçamento entre o ícone e o texto*/
-    border:2px solid var(--cor--terciaria); /* o primeiro valor é o tamanho da borda, o segundo valor é sobre o tracejado, e o terceiro valor é a cor da borda*/
+    border:2px solid #10A19D; /* o primeiro valor é o tamanho da borda, o segundo valor é sobre o tracejado, e o terceiro valor é a cor da borda*/
     width:50%; /*tamanho do botão*/
     text-align: center; /*alinhamento do texto centraliza o texto*/
     border-radius:8px; /*torna as bordas arredondadas*/
@@ -101,20 +104,23 @@ body {
     font-weight: 700; /*tamanho da fonte */
     padding:21.5px 0px;
     text-decoration:none; /*tag para a decoração do texto*/
-    color:var(--cor--secundaria);
-    font-family:"Montserrat", serif; 
+    color:#F6F6F6;
+    font-family:"Montserrat", serif;
 }
 
 .apresentacao__links__link:hover { /*estiliza quando o mouser passar por cima*/
-    background-color: var(--cor--hover);
+    background-color:#272727;
 }
 .apresentacao__imagem{
-    width:50%;
-    border-radius:10px;
+    flex: 1; /* Permite que a imagem ocupe o espaço necessário */
+    width:80%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
 }
+
 .projeto-container {
-    display: flex;
+    display:grid;
     align-items: center; /* Alinha os elementos verticalmente */
     justify-content:space-between; /* Mantém um espaço entre texto e imagem */
     margin-bottom: 40px; /* Espaço entre cada projeto */
@@ -126,30 +132,32 @@ body {
 
 .projeto-texto {
     flex: 1; /* Faz com que o texto ocupe o espaço disponível */
-    min-width: 50%; /* Evita que o texto fique muito pequeno */
-    max-width: 50%; /* Mantém um limite para não ficar muito largo */
-    text-align:left;
     font-size: 1.5rem;
     line-height: 1.6;
 }
+
+
 .apresentacao__imagem_projeto{
     flex: 1; /* Permite que a imagem ocupe o espaço necessário */
     width:90%;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+   
     
+
 
 }
 
 .rodape {
-    color:var(--cor--segundaria);
-    background-color:var(--cor--terciaria);
+    color:#F6F6F6;
+    background-color:#373A40;
     padding:24px;  /*o padding é a distância entre o conteúdo e a borda*/
     text-align:center;
-    font-family: var(--fonte-secundaria);
+    font-family: 'Montserrat', sans-serif;
     font-size:1.5rem;
     font-weight:400;
 }
+
 
 @media (max-width: 1200px) {
     .cabecalho {
@@ -161,7 +169,7 @@ body {
     .apresentacao {
         flex-direction: column-reverse;
         padding:5%;
-        
+       
     }
     .apresentacao__conteudo{
         width:auto;
@@ -171,10 +179,9 @@ body {
         text-align: center; /* Centraliza o texto */
     }
 
+
     .projeto-texto, .apresentacao__imagem {
         max-width: 100%; /* Permite que ocupem toda a largura */
     }
-    
    
 }
-

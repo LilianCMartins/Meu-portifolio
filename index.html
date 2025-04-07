@@ -11,8 +11,8 @@
    <header class = "cabecalho">  
         <nav class = "cabecalho__menu"> <!--tag nav para navegar-->
             <a class="cabecalho__menu__link" href="index.html">Home</a><!--Faz referência a própripria página-->
-            <a  class="cabecalho__menu__link" href="about.html">Sobre mim</a><!--Faz referência a outra página Web-->
-            <a  class="cabecalho__menu__link" href="projeto.html">Projetos</a><!--Faz referência a outra página Web-->
+            <a  class="cabecalho__menu__link" href=#sobre>Sobre mim</a><!--Faz referência a outra página Web-->
+            <a  class="cabecalho__menu__link" href=#projetos>Projetos</a><!--Faz referência a outra página Web-->
 
         </nav>
       </header> <!--Cabeçalho-->
@@ -30,26 +30,77 @@
                 conversar?
             </p>
             <div class = "apresentacao__links">
-            <h2 class = "apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+                <h2 class = "apresentacao__links__subtitulo">Acesse minhas redes:</h2>
 
-            <a class="apresentacao__links__navegacao" href="https://github.com/LilianCMartins">  <!-- tag ancora, é muito semelhante a tag de imagem-->
-                <img src="./assets/github.png">
+                <a class="apresentacao__links__navegacao" href="https://github.com/LilianCMartins">  <!-- tag ancora, é muito semelhante a tag de imagem-->
+                    <img src="./assets/github.png">
                 GitHub
-        </a>   
-        <a  class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/liliancarlamartins/">
-            <img src="./assets/linkedin.png">
-            LinkedIn
-        </a>
-       
-   
+                </a>   
+        
+                <a  class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/liliancarlamartins/">
+                    <img src="./assets/linkedin.png">
+                LinkedIn
+               </a>
+        
         </div>
      </section>
-     <img class="apresentacao__imagem" src="./assets/Lilianimg.jpg" alt="Foto da Joana Santos programando">
 
-     </main><!--  O conteúdo principal, onde coloca o título, o paragráfo-->
-     <footer class ="rodape">
+
+     <img class="apresentacao__imagem" src="./assets/Lilianimg.jpg" alt="Foto de Lilian Martins">
+
+     <section id="sobre" class = "apresentacao__conteudo">
+        <h2 class="apresentacao__conteudo__titulo">
+           Sobre mim
+        </h2>
+        <p class="apresentacao__conteudo__texto">Estudante de Análise e desenvolvimento de sistemas pela Newton Paiva, formada
+            em Administração pelo CEFET-MG, estou em transição de carreira para área de tecnologia.
+        </p>
+        <p class="apresentacao__conteudo__texto">Além da faculdade, estou fazendo curso de Programação Full Stack na Infinity School
+            e acabei de passar no programa ONE (Oracle Next Education), na especialização de Data Science.
+        </p>
+     </section>
+     
+     <section class="apresentacao__conteudo">
+        <section id = "projetos" class="apresentacao__conteudo">
+            <h2 class="apresentacao__conteudo__titulo">Projetos</h2>
+            <p class="apresentacao__conteudo__texto">Aqui estão alguns dos meus projetos desenvolvidos.
+            </p>
+
+    <section class="projeto-container">
+        <div class="projeto-texto">
+            <h2>1. Jogo do Número Secreto</h2>
+            <p class="apresentacao__conteudo__texto">Projeto desenvolvido no curso de lógica de programação da Alura.</p>
+            <p class="apresentacao__conteudo__texto">No jogo do número secreto você vai escolher um número entre 1 e 10, até acertar o número...</p>
+            <a class="apresentacao__links__navegacao" href="https://jogo-alpha-snowy.vercel.app/">Jogar o jogo do número secreto</a>
+        </div>
+        <img class="apresentacao__imagem_projeto" src="./assets/jogodonumerosecreto.png" alt="Foto do projeto Jogo do Número Secreto">
+    </section>
+    
+    <section class="projeto-container">
+        <div class="projeto-texto">
+            <h2>2. Challenge Amigo Secreto</h2>
+            <p class="apresentacao__conteudo__texto">Challenge desenvolvido no curso de lógica de programação da Alura.</p>
+            <p class="apresentacao__conteudo__texto">No Challenge você pode adicionar seus amigos e eles serão sorteados de forma aleatória.</p>
+            <a class="apresentacao__links__navegacao" href="https://challenge-amigo-secreto-green-rho.vercel.app/">Bora fazer um amigo secreto?</a>
+        </div>
+        <img class="apresentacao__imagem_projeto" src="./assets/Amigo Secreto.png" alt="Foto do projeto do Challenge do Amigo Secreto">
+    </section>
+    
+    <section class="projeto-container">
+        <div class="projeto-texto">
+            <h2>3. Mulheres que fizeram história na tecnologia</h2>
+            <p class="apresentacao__conteudo__texto">Projeto desenvolvido no curso da Programaria.</p>
+            <p class="apresentacao__conteudo__texto">Minha primeira página web, contando um pouco sobre a história de mulheres que fizeram história na tecnologia.</p>
+            <a class="apresentacao__links__navegacao" href="https://ec63a61d-96d6-4081-a313-2b972976ef7a-00-191g2vuv39w3q.worf.replit.dev/">Venha conhecer a página!</a>
+        </div>
+        <img class="apresentacao__imagem_projeto" src="./assets/Programaria.png" alt="Foto do projeto Mulheres que fizeram história na tecnologia">
+        </section>
+    </section>
+
+</main><!--  O conteúdo principal, onde coloca o título, o paragráfo-->
+<footer class ="rodape">
         <p>Desenvolvido por Lilian Martins.</p>
-     </footer> <!-- O rodapé da página-->
+</footer> <!-- O rodapé da página-->
 
     
 </body>
